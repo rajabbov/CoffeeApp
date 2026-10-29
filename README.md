@@ -1,86 +1,61 @@
 <div align="center">
 
-# ☕ CoffeeApp — Artisanal Coffee & Brew Lounge
-
-> *Handcrafted coffee culture meets modern Android engineering — powered by Google Firebase Realtime Database and hardware-accelerated Frosted Glass (Glassmorphism).*
+# ☕ 🥐 CoffeeApp
+### *Artisanal Specialty Coffee & Café Lounge* ✨ 🧋
 
 <br/>
 
-[![Kotlin](https://img.shields.io/badge/Language-Kotlin-7F52FF?style=flat&logo=kotlin&logoColor=white)](https://kotlinlang.org/)
-[![Firebase](https://img.shields.io/badge/Backend-Firebase_Realtime_DB-FFCA28?style=flat&logo=firebase&logoColor=black)](https://firebase.google.com/)
-[![UI Style](https://img.shields.io/badge/Design-Glassmorphism_BlurView-6F4E37?style=flat)](https://github.com/Dimezis/BlurView)
-[![Architecture](https://img.shields.io/badge/Architecture-MVVM_+_LiveData-4285F4?style=flat)](https://developer.android.com/topic/libraries/architecture)
-[![Android SDK](https://img.shields.io/badge/Target%20SDK-35-green?style=flat&logo=android&logoColor=white)](https://developer.android.com/)
+<p align="center">
+  <img src="art/coffee_banner.jpg" alt="CoffeeApp 3D Banner" width="100%" style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.25);" />
+</p>
+
+<p align="center">
+  <a href="https://kotlinlang.org/"><img src="https://img.shields.io/badge/Crafted%20With-Kotlin%20100%25-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin" /></a>
+  <a href="https://firebase.google.com/"><img src="https://img.shields.io/badge/Realtime%20Cloud-Firebase%20%E2%9A%A1-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase" /></a>
+  <a href="#-frosted-glass-glassmorphism-ui"><img src="https://img.shields.io/badge/Aesthetic-Glassmorphism%20%F0%9F%92%8E-6F4E37?style=for-the-badge" alt="Glassmorphism" /></a>
+  <a href="https://developer.android.com/"><img src="https://img.shields.io/badge/Platform-Android%2015%20%F0%9F%93%B1-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android" /></a>
+</p>
+
+> ☕ *"Life is too short for mediocre coffee. CoffeeApp brings the intoxicating aroma, cozy warmth, and handcrafted perfection of a third-wave specialty roastery straight to your fingertips."* 🪵 🌿 🥞
 
 </div>
 
 ---
 
-## 📖 Overview
+## 🌟 The Specialty Café Experience
 
-**CoffeeApp** is a specialty coffee shop and beverage ordering application designed for Android. It combines an artisanal dark-roast aesthetic with modern cloud persistence. Users can explore 9 curated beverage and food categories, view detailed tasting notes, select customized cup sizes, and experience real-time glassmorphic UI blurring.
+Imagine stepping into your favorite cozy café on a cool morning: the hiss of the steam wand, the rich earthy perfume of freshly ground Arabica beans, and the glow of warm ambient lights. 🕯️ 
+
+**CoffeeApp** translates that sensory journey into an ultra-modern mobile app. It blends a **dark-roast aesthetic** with **frosted glass UI (Glassmorphism)** and real-time cloud data delivery through **Google Firebase**.
 
 ---
 
-## 🥐 Handcrafted Menu Categories
+## 🥐 The 9 Sacred Coffee & Bakery Collections
 
-The catalog is split into 9 dedicated collections dynamically queried from Firebase:
+Every single brew and pastry is synced live from Firebase, organized into 9 handcrafted collections:
 
-| ☕ Hot Coffee | 🧊 Ice Coffee | ⚗️ Brewing Coffee |
+| ☕ Hot Coffee | 🧊 Ice Coffee & Cold Brew | ⚗️ Brewing Bar |
 | :---: | :---: | :---: |
-| Single-origin Espressos, Velvety Lattes, Flat Whites | Smooth Cold Brews, Iced Americanos, Frappés | Pour-overs, Chemex & Aeropress single-origin beans |
-| **🍵 Hot Drinks** | **🧋 Ice Drinks** | **🥤 Thick Shakes** |
-| Spiced Chais, Ceremonial Matchas, Herbal Teas | Sparkling Refreshers, Berry Spritzers, Lemonades | Creamy chocolate, vanilla, and salted caramel shakes |
-| **🥐 Breakfast** | **🍰 Cakes & Treats** | **🍽️ Gourmet Lounge** |
-| Freshly baked morning croissants & toasties | New York cheesecakes, brownies & tiramisu | Savory bites and chef-curated lounge pairings |
+| Single-origin Espressos, Silky Lattes, Spanish Cortados & velvety Flat Whites. 🤎 | 18-hour cold steeped brews, Iced Americanos & creamy vanilla cold foams. ❄️ | Manual V60 pour-overs, Chemex drip, and precision Aeropress roasts. 🧪 |
+| **🍵 Hot Teas & Tonics** | **🧋 Ice Refreshers** | **🥤 Thick Shakes & Frappés** |
+| Kyoto Ceremonial Matcha, Spiced Masala Chai & organic soothing herbal teas. 🌿 | Sparkling citrus spritzers, wild berry lemonades & dragonfruit quenchers. 🍓 | Decadent Belgian chocolate, salted caramel & creamy hazelnut shakes. 🍫 |
+| **🥐 Morning Bakery** | **🍰 Artisan Patisserie** | **🍽️ Gourmet Lounge Pairings** |
+| Flaky French butter croissants, avocado sourdough toast & breakfast bagels. 🥞 | New York baked cheesecakes, espresso tiramisu & fudge brownies. 🎂 | Truffle fries, grilled artisan paninis & chef-curated savory delights. 🥪 |
 
 ---
 
-## 🏗 Architecture & Cloud Data Pipeline
+## 💎 Frosted Glass (Glassmorphism) UI
 
-The application follows the recommended **MVVM (Model-View-ViewModel)** architecture with a clean repository pattern:
-
-```text
-  ┌─────────────────────────────────────────────────────────┐
-  │         Google Firebase Realtime Database               │
-  │                  "Items" collection                     │
-  └────────────────────────────┬────────────────────────────┘
-                               │ Real-time listener
-                               ▼
-  ┌─────────────────────────────────────────────────────────┐
-  │                 MainRepository.kt                       │
-  │   - ref.orderByChild("categoryId").equalTo(id)          │
-  │   - Parses snapshots into List<ItemsModel>              │
-  └────────────────────────────┬────────────────────────────┘
-                               │ Emits LiveData
-                               ▼
-  ┌─────────────────────────────────────────────────────────┐
-  │                  MainViewModel.kt                       │
-  │   - Exposes observable LiveData streams to Views        │
-  └────────────────────────────┬────────────────────────────┘
-                               │ Observes
-                               ▼
-  ┌─────────────────────────────────────────────────────────┐
-  │             ListActivity & DetailActivity               │
-  │   - Renders with ViewBinding & Glide image caching      │
-  │   - Hardware-accelerated frosted glass (BlurView)       │
-  └─────────────────────────────────────────────────────────┘
-```
-
----
-
-## 💎 Frosted Glass (Glassmorphism) Implementation
-
-To deliver an elegant café lounge vibe, **CoffeeApp** applies real-time Gaussian blur to overlay panels:
+The user interface isn't flat — it uses **hardware-accelerated live background blur** via RenderScript to create the iconic frosted glass café look:
 
 ```kotlin
-// Real-time hardware-accelerated blur using RenderScript
+// ☕ Real-time frosted glass effect on the coffee dashboard
 val decorView = this.window.decorView
 val rootView = decorView.findViewById<View>(android.R.id.content) as ViewGroup
 
 binding.blurView.setupWith(rootView, RenderScriptBlur(this))
     .setFrameClearDrawable(decorView.background)
-    .setBlurRadius(10f)
+    .setBlurRadius(10f) // Soft, cozy Gaussian blur radius
 
 binding.blurView.setOutlineProvider(ViewOutlineProvider.BACKGROUND)
 binding.blurView.setClipToOutline(true)
@@ -88,39 +63,61 @@ binding.blurView.setClipToOutline(true)
 
 ---
 
-## 🛠 Tech Stack
+## ☁️ Realtime Cloud Roastery Pipeline (Firebase + MVVM)
 
-- **Language:** Kotlin 100% (JVM Target 11)
-- **Minimum SDK:** Android 7.0 (API 24)
-- **Target SDK:** Android 15 (API 35)
-- **Cloud Backend:** Google Firebase Realtime Database
-- **Architecture:** MVVM + Android Architecture Components (`ViewModel`, `LiveData`)
-- **UI & Blur Effects:** ViewBinding, ConstraintLayout, [BlurView 2.0.5](https://github.com/Dimezis/BlurView)
-- **Image Pipeline:** [Glide 4.12.0](https://github.com/bumptech/glide) with rounded corner transformations
-- **Typography:** Custom calligraphic fonts (`pristina.ttf`)
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites:
-- Android Studio (Koala / Ladybug or newer)
-- JDK 11 or higher
-- Android Device or Emulator (API 24+)
-
-### Build & Run:
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/ibrohim2005rajabboyev/CoffeeApp.git
-   ```
-2. Open **CoffeeApp** in Android Studio.
-3. Allow Gradle to download dependencies and sync (`google-services.json` is pre-configured).
-4. Select your device and press **Run** (`Shift + F10`).
+```text
+       ☁️ Google Firebase Realtime Database
+                   ("Items" Catalog)
+                           │
+                           ▼
+       ⚡ MainRepository.kt (Realtime Querying)
+          ref.orderByChild("categoryId").equalTo(id)
+                           │
+                           ▼
+       📊 MainViewModel.kt (Observable LiveData Streams)
+                           │
+                           ▼
+       📱 Glassmorphic UI (ListActivity & DetailActivity)
+          • Real-time Price Recalculation
+          • Custom Cup Size Selection (Small, Medium, Large)
+          • Glide Caching with Smooth Corner Transformations
+```
 
 ---
 
-## 👨‍💻 Developer
+## 🛠 Tech Stack & Engineering Specs
 
-**Ibrohimjon Rajabboyev**  
-*Mobile Application Developer • Android • Kotlin • Flutter*  
-🔗 [GitHub Profile](https://github.com/ibrohim2005rajabboyev)
+- **Core Language:** Kotlin 100% (Target JVM: 11)
+- **Minimum SDK:** Android 7.0 (API Level 24)
+- **Target SDK:** Android 15 (API Level 35)
+- **Backend Infrastructure:** Google Firebase Realtime Database
+- **Architecture Pattern:** MVVM (Model-View-ViewModel) with Android Architecture Components
+- **UI & Aesthetics:** [BlurView 2.0](https://github.com/Dimezis/BlurView), ViewBinding, Custom Calligraphy Fonts (`pristina.ttf`), Smooth Curves
+- **Image Pipeline:** Glide 4.12 with disk caching and rounded corner transformations
+
+---
+
+## 🚀 Quick Brew & Run (Start in 60 Seconds)
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/ibrohim2005rajabboyev/CoffeeApp.git
+
+# 2. Open in Android Studio
+# Open Android Studio -> Select "Open..." -> Choose the CoffeeApp directory
+
+# 3. Hit Run (Shift + F10)
+# Enjoy the coffee ordering experience with live Firebase data! ☕
+```
+
+---
+
+## 👨‍💻 Meet The Barista / Developer
+
+> *"I designed CoffeeApp for those who appreciate both great coffee and great code. Clean architecture, zero lag, and an aesthetic that warms your soul."* ☕ ✨
+
+<p align="left">
+  <strong>Ibrohimjon Rajabboyev</strong><br/>
+  <em>Mobile Application Developer • Android • Kotlin • Flutter • UI/UX</em><br/>
+  🔗 <a href="https://github.com/ibrohim2005rajabboyev">GitHub Profile</a> • Let's build something delightful together!
+</p>
